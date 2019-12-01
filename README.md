@@ -1,10 +1,10 @@
-##### Airfare Pricing
+# Airfare Pricing
 
-###### Description:
+### Description:
 
 Model using Spark to return price based on two airports:
 
-###### Overview:
+### Overview:
 
 The .csv file contains 3 columns in this order:
 1. origin airport code (e.g. ABE)
@@ -14,7 +14,7 @@ The .csv file contains 3 columns in this order:
 The module spark.py will return the median airfare for a provided origin
  airport code and provided destination airport code.
  
-###### Instructions:
+### Instructions:
 
 You must have Apache Spark set up in your system.
 
@@ -25,12 +25,16 @@ Navigate to this directory in command prompt.  We will use the spark-submit
  method on our .py file **while also providing** our origin and destination
   airport codes
   
-> spark-submit spark.py (Origin) (Destination)
+```
+spark-submit spark.py (Origin) (Destination)
+```
 
 For example, if we wanted to find the median airfare between ABE and MIA, our
  prompt would look like this:
  
- > spark-submit spark.py ABE MIA
+```
+spark-submit spark.py ABE MIA
+```
 
 The program will return the median airfare for all flights that match the
  parameters.
@@ -39,16 +43,4 @@ If you would like to view the individual columns returned, uncomment lines 29
 -30 in spark.py and the program will print these columns before providing the
  median value.  
 
-
-
-
-
-###### Method
-
-- Spark
-- Median - Use approxQuantile
-- Fields I want to return:
-    1. Origin - 0
-    2. Destination - 1
-    3. Market Fare - 2
 
