@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-import cmd, sys
+import sys
     
 origin = sys.argv[1]
 dest = sys.argv[2]
@@ -25,8 +25,9 @@ schemaPrices.createOrReplaceTempView("prices")
 
 abeToMia = spark.sql("SELECT * FROM prices WHERE Origin = '" + str(origin) + "' AND Dest = '" + str(dest) + "'")
 
-for value in abeToMia.collect():
-    print(value)
+# Uncomment lines below to return all columns for given parameters.
+# for value in abeToMia.collect():
+#    print(value)
 
 median = abeToMia.approxQuantile("MktFare", [0.5], 0.25)
 print("The median fare from " + str(origin) + " to " + str(dest) + " is " + str(median) + " dollars.")
