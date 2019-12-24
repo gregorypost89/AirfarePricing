@@ -20,7 +20,7 @@ The .csv file should contain 3 columns in this order:
 2. destination airport code (e.g MIA)
 3. Market Fare (in USD)
 
-A formatted .csv file **OriginDestFare.csv** is provided in this repository for
+A formatted .csv file [OriginDestFare.csv](https://raw.githubusercontent.com/gregorypost89/AirfarePricing/master/OriginDestFare.csv) is provided in this repository for
 testing purposes, which consists of 2019 Q1 data. 
 
 The program will calculate the median using the approxQuantile method in
